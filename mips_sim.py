@@ -134,7 +134,6 @@ def simulate(InstructionBin,InstructionHex):
     print("                    " + str(fourCycles) + " instructions take 4 cycles" )
     print("                    " + str(fiveCycles) + " instructions take 5 cycles" )
     print("Registers: ") #+ str(Register))
-    print("PC = " + str(PC*4))
     print("$0 = " + str(Register[0]))
     print("$1 = " + str(Register[1]))
     print("$2 = " + str(Register[2]))
@@ -143,12 +142,16 @@ def simulate(InstructionBin,InstructionHex):
     print("$5 = " + str(Register[5]))
     print("$6 = " + str(Register[6]))
     print("$7 = " + str(Register[7]))
+    print("PC = " + str(PC*4))
 
 def main():
     print("Welcome to ECE366 sample MIPS_sim, choose the mode of running i_mem.txt: ")
-    # debugMode =True if  int(input("1 = debug mode         2 = normal execution\n"))== 1 else False
-
-    I_file = open("i_mem.txt","r")
+     #debugMode =True if  int(input("1 = debug mode         2 = normal execution\n"))== 1 else False
+    
+    if (int(input("Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n"))== 1):
+        I_file = open("progA_v1.txt","r")
+    else:
+        I_file = open("progA_v2.txt","r")
     InstructionBin = []            # array containing all instructions to execute         
     InstructionHex = []
     for line in I_file:
