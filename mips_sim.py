@@ -1,4 +1,5 @@
-# Authors: Trung Le, Weijing Rao
+# Original Authors: Trung Le, Weijing Rao
+# Editors: Karim, Erick
 
 # This Python program simulates a restricted subset of MIPS instructions
 # and output 
