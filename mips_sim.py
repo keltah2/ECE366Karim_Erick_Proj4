@@ -58,7 +58,7 @@ def simulate(InstructionBin,InstructionHex):
             PC += 1
             Cycle += 4
             fourCycles += 1
-            Register[int(fetch[16:21],2)] = xor(Register[int(fetch[6:11],2)],Register[int(fetch[11:16],2)])
+            Register[int(fetch[16:21],2)] = Register[int(fetch[6:11],2)] ^ Register[int(fetch[11:16],2)]
         elif(fetch[0:6] == '001000'):                               # ADDI
             imm = int(fetch[16:32],2) if fetch[16]=='0' else -1*(65535 -int(fetch[16:32],2)+1)
             print("Cycles " + str(Cycle) + ":")
@@ -148,10 +148,35 @@ def main():
     print("Welcome to ECE366 sample MIPS_sim, choose the mode of running i_mem.txt: ")
      #debugMode =True if  int(input("1 = debug mode         2 = normal execution\n"))== 1 else False
     
-    if (int(input("Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n"))== 1):
-        I_file = open("progA_v1.txt","r")
-    else:
-        I_file = open("progA_v2.txt","r")
+    #if (int(input("Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n3 = Program B version 1\n4 = Program B version 2\n"))== 1):
+     #   I_file = open("progA_v1.txt","r")
+    #elif (int(input("Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n3 = Program B version 1\n4 = Program B version 2\n"))== 2):
+    #    I_file = open("progA_v2.txt","r")
+    #elif (int(input("Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n3 = Program B version 1\n4 = Program B version 2\n"))== 3):
+     #   I_file = open("progB_v1.txt","r")
+    #else:
+      #  I_file = open("progB_v2.txt","r")
+
+    inputActive = False
+    userInput = int(input('Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n3 = Program B version 1\n4 = Program B version 2\n'))
+
+    while (not(inputActive)):
+        if userInput == 1:
+            I_file = open("progA_v1.txt","r") 
+            inputActive = True
+        elif userInput == 2:
+            I_file = open("progA_v2.txt","r")
+            inputActive = True
+        elif userInput == 3:
+            I_file = open("progB_v1.txt","r")
+            inputActive = True
+        elif userInput == 4:
+            I_file = open("progB_v2.txt","r")
+            inputActive = True
+        else:
+            print("Please enter the correct number. Try again.")
+            userInput = input('Choose by inputting one of the following numbers:\n1 = Program A version 1\n2 = Program A version 2\n3 = Program B version 1\n4 = Program B version 2\n')
+    
     InstructionBin = []            # array containing all instructions to execute         
     InstructionHex = []
     for line in I_file:
