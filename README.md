@@ -3,8 +3,8 @@
 Result of Program A version 1:
 ![Screenshot](https://image.ibb.co/mma9kV/PAV1.png)
 Result of Program A version 2:
-![alt text](https://ibb.co/eBJjKq)
+![Screenshot](https://image.ibb.co/ckgRXA/PAV2.png)
 Result of Program B version 1:
-![alt text](https://ibb.co/cmKfsA)
+![Screenshot](https://image.ibb.co/jyQaQV/PBV1.png)
 Result of Program B version 2:
-![alt text](https://ibb.co/cRfmXA)
+![Screenshot](https://image.ibb.co/cvovQV/PBV2.png)
