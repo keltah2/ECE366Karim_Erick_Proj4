@@ -6,6 +6,9 @@
 # Settings: Multi-Cycle CPU, i.e lw takes 5 cycles, beq takes 3 cycles, others are 4 cycles
 
 mem_space = 4096 # Memory addr starts from 2000 , ends at 3000.  Hence total space of 4096
+# That's true, however to simplify the memory allocation and not to worry about address
+# conversion I have decided to use mem_space = end address - begin address
+
 # this is probably wrong:
 # MIPS is byte-addressable, so from 0x2000 to 0x3000 is a total of 0x1000 BYTES, which means
 # 0x1000 / 4 = 0x0400 words
