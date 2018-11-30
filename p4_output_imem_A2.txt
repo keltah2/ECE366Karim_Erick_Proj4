@@ -1,0 +1,24 @@
+***Finished simulation***
+Total # of cycles in Multi-Cycle: 732
+Total # of cycles in Single Cycle: 196
+Dynamic instructions count: 196. Break down:
+                    59 instructions take 3 cycles
+                    126 instructions take 4 cycles
+                    10 instructions take 5 cycles
+Registers: $0 = 0
+$1 = -4095
+$2 = 40
+$3 = 1
+$4 = 696324
+$5 = 40
+$6 = 0
+$7 = 0
+PC = 68
+Total Number of Hits: 1
+Total Number of Misses: 9
+Total Percent of Hit Rate: 10.0%
+Cache Contents *each row is a block
+-4095 0 0 0 
+------------------------------------------------------------------------------------
+-4095 0 0 0 
+------------------------------------------------------------------------------------
